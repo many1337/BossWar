@@ -177,7 +177,7 @@ class BossEntity extends Zombie {
         $this->damagers = [];
     }
 
-    public function attack(EntityDamageEvent $source) {
+    public function attack(EntityDamageEvent $source): void {
         $result = parent::attack($source);
 
         if (!$source instanceof EntityDamageByEntityEvent || !$source->getDamager() instanceof Player) {
